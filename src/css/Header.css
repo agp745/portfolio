@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    background-color: rgb(36, 36, 36);
+    padding: 1rem
+}
+
+.nav-item::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(../assets/sks-painting.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
