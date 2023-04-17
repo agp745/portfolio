@@ -1,7 +1,8 @@
-// import '../css/App.css'
+import '../css/App.css'
 import Header from './Header'
 import Projects from './Projects'
 import Hero from './Hero'
+import Contact from './Contact'
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
       <Header />
       <Hero />
       <Projects />
+      <section className="gap"> </section>
+      <Contact id="contact"/>
     </div>
   )
 }

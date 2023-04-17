@@ -2,17 +2,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff
+    color: #fff;
+    margin-bottom: 10rem;
 }
 
 .hero h1 {
     font-size: 6rem;
     margin-bottom: -2rem;
     margin-top: 10rem;
+    animation: showText 1s ease forwards;
 }
 
 .hero p {
     font-size: 2rem;
     margin-bottom: 8rem;
     letter-spacing: .5rem;
+    animation: showText 2s ease forwards;
+}
+
+@keyframes showText {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
