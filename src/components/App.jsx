@@ -4,6 +4,7 @@ import Projects from './Projects'
 import Hero from './Hero'
 import Contact from './Contact'
 import Skills from './Skills'
+import AboutMe from './AboutMe'
 
 function App() {
 
@@ -12,10 +13,13 @@ function App() {
       <Header />
       <Hero />
       <Skills />
+      <section className='gap'></section>
+      <AboutMe />
+      <section className='gap2'></section>
       <Projects />
-      <section className="gap"> </section>
+      <section className="gap3"> </section>
       <Contact id="contact"/>
-      <section className='gap2'> </section>
+      <section className='gap4'> </section>
     </div>
   )
 }
