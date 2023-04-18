@@ -1,6 +1,10 @@
 
 
-function Icon({ tech, hoveredIcon, setHoveredIcon }) {
+function Icon(props) {
+
+    const {hoveredIcon, setHoveredIcon, tech} = props
+    const isHovered = hoveredIcon === tech
+
     return(
 
         <div className="icon">
@@ -10,8 +14,8 @@ function Icon({ tech, hoveredIcon, setHoveredIcon }) {
                 onMouseEnter={() => setHoveredIcon(tech)}
                 onMouseLeave={() => setHoveredIcon(null)}
                 />
-            {hoveredIcon && (
-                <div>
+            {isHovered && (
+                <div className="icon-name">
                     <span>{tech}</span>
                 </div>
             )}

@@ -3,59 +3,67 @@ import Icon from "./Icon"
 
 function Skills() {
 
-    const html5 = './src/assets/SVGs/html5-icon.svg'
-    const css3 = './src/assets/SVGs/css3-icon.svg'
-    const bootstrap = './src/assets/SVGs/bootstrap-icon.svg'
-    const tailwindcss = './src/assets/SVGs/tailwindcss-icon.svg'
-    const javascript = './src/assets/SVGs/javascript-icon.svg'
-    const typescript = './src/assets/SVGs/typescript-icon.svg'
-    const reactjs = './src/assets/SVGs/reactjs-icon.svg'
-    const redux = './src/assets/SVGs/redux-icon.svg'
-    const nodejs = './src/assets/SVGs/nodejs-icon.svg'
-    const expressjs = './src/assets/SVGs/expressjs-icon.svg'
-    const postgresql = './src/assets/SVGs/postgresql-icon.svg'
-    const sequelizejs = './src/assets/SVGs/sequelizejs-icon.svg'
-    const mongodb = './src/assets/SVGs/mongodb-icon.svg'
-    const bash = './src/assets/SVGs/bash-icon.svg'
-    const linux = './src/assets/SVGs/linux-icon.svg'
-    const auth0 = './src/assets/SVGs/auth0-icon.svg'
-    const git = './src/assets/SVGs/git-icon.svg'
-
     const [hoveredIcon, setHoveredIcon] = useState(null)
 
-    const propsObj = {
-        tech:"html5",
+    const stateObj = {
         hoveredIcon: hoveredIcon,
         setHoveredIcon: setHoveredIcon,
     }
 
     return(
         <section className="skills">
-            {/* <img
-            src={html5}
-            className='icon'
-            onMouseEnter={() => setHoveredIcon('html5')}
-            onMouseLeave={() => setHoveredIcon(null)}
-            /> */}
 
-            {/* <Icon tech={hoveredIcon} /> */}
-            <Icon {...propsObj} />
-            <img src={css3} className='icon' />
-            <img src={bootstrap} className='icon' />
-            <img src={tailwindcss} className='icon' />
-            <img src={javascript} className='icon' />
-            <img src={typescript} className='icon' />
-            <img src={reactjs} className='icon' />
-            <img src={redux} className='icon' />
-            <img src={nodejs} className='icon' />
-            <img src={expressjs} className='icon' />
-            <img src={postgresql} className='icon' />
-            <img src={sequelizejs} className='icon' />
-            <img src={mongodb} className='icon' />
-            <img src={bash} className='icon' />
-            <img src={linux} className='icon' />
-            <img src={auth0} className='icon' />
-            <img src={git} className='icon' />
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="html5" />
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="css3" />
+            </a>
+            <a href="https://tailwindcss.com/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="tailwindcss" />
+            </a>
+            <a href="https://getbootstrap.com/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="bootstrap" />
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="javascript" />
+            </a>
+            <a href="https://www.typescriptlang.org/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="typescript" />
+            </a>
+            <a href="https://react.dev/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="reactjs" />
+            </a>
+            <a href="https://redux.js.org/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="redux" />
+            </a>
+            <a href="https://nodejs.org/en/docs" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="nodejs" />
+            </a>
+            <a href="http://expressjs.com/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="expressjs" />
+            </a>
+            <a href="https://www.postgresql.org/docs/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="postgresql" />
+            </a>
+            <a href="https://sequelize.org/docs/v6/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="sequelizejs" />
+            </a>
+            <a href="https://www.mongodb.com/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="mongodb" />
+            </a>
+            <a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="bash" />
+            </a>
+            <a href="https://wiki.archlinux.org/title/Kernel" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="linux" />
+            </a>
+            <a href="https://auth0.com/docs" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="auth0" />
+            </a>
+            <a href="https://git-scm.com/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="git" />
+            </a>
         </section>
     )
 }

@@ -1,47 +1,47 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(36, 36, 36);
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: rgb(36, 36, 36);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background-image: url(../assets/sks-painting.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* background-position: center; */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(../assets/sks-painting.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
 }
-
 
 a {
-  font-weight: 500;
-  /* color: #646cff; */
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: inherit;
+    font-weight: 500;
+    /* color: #646cff; */
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
 
 body {
-  margin: 0;
-  /* display: flex;
+    margin: 0;
+    overflow-x: hidden;
+    /* display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh; */
