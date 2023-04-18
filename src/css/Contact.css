@@ -1,12 +1,7 @@
 .contact-field {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     background-color: rgba(36, 36, 36, 0.6);
-    /* padding-bottom: 4rem; */
-    transform: scale(1.5);
-    margin-top: 52.9px;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-wrapper {
@@ -14,11 +9,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* transform: scale(1.5); */
+    background-color: rgba(36, 36, 36, 0.9);
+    padding: 3rem;
+    width: fit-content;
+    border-radius: 3%;
+    box-shadow: 5px 5px 8px rgb(10, 10, 10);
 }
 
 .contact-subheader {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-top: -2rem;
     margin-bottom: 0;
+}
+
+.contact-label {
+    font-size: 1.5rem;
+}
+
+.inputbox {
+    width: 17rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+.textarea {
+    width: 25rem;
+    height: 10rem;
+    font-size: 1.2rem;
+}
+
+.contact-button {
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 1.2rem;
 }
