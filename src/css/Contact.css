@@ -1,13 +1,24 @@
 .contact-field {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background-color: rgba(36, 36, 36, 0.6);
+    /* padding-bottom: 4rem; */
+    transform: scale(1.5);
+    margin-top: 52.9px;
+}
+
+.contact-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(36, 36, 36, 0.6);
-    padding-bottom: 4rem;
+    /* transform: scale(1.5); */
 }
 
 .contact-subheader {
     font-size: 3rem;
     margin-top: -2rem;
+    margin-bottom: 0;
 }

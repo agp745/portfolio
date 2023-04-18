@@ -22,14 +22,17 @@ export const Contact = () => {
     };
   
     return (
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
+      <form ref={form} onSubmit={sendEmail} className="contact-field">
+        <section className='contact-wrapper'>
+          <h1 className='contact-subheader'>Contact Me</h1>
+          <label>Name</label>
+          <input type="text" name="user_name" placeholder='Mary Doe'/>
+          <label>Email</label>
+          <input type="email" name="user_email" placeholder='example@email.com'/>
+          <label>Message</label>
+          <textarea name="message" placeholder='"Hello!"'/>
+          <input type="submit" value="Send"/>
+        </section>
       </form>
     );
   };

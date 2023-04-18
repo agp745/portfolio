@@ -13,6 +13,7 @@ function App() {
       <Projects />
       <section className="gap"> </section>
       <Contact id="contact"/>
+      <section className='gap2'> </section>
     </div>
   )
 }
