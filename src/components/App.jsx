@@ -3,6 +3,7 @@ import Header from './Header'
 import Projects from './Projects'
 import Hero from './Hero'
 import Contact from './Contact'
+import Skills from './Skills'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <Skills />
       <Projects />
       <section className="gap"> </section>
       <Contact id="contact"/>

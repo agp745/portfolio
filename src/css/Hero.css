@@ -9,14 +9,14 @@
 .hero h1 {
     font-size: 6rem;
     margin-bottom: -2rem;
-    margin-top: 10rem;
+    margin-top: 15rem;
     animation: showText 1s ease forwards;
 }
 
 .hero p {
     font-size: 2rem;
     margin-bottom: 8rem;
-    letter-spacing: .5rem;
+    letter-spacing: 0.5rem;
     animation: showText 2s ease forwards;
 }
 

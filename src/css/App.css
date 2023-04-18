@@ -16,6 +16,40 @@
     margin-top: 3.3rem;
 }
 
+/* skills-section */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    width: 5rem;
+    animation: showIcons 1.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2) translateY(-1rem);
+}
+
+@keyframes showIcons {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
