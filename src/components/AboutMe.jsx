@@ -13,7 +13,7 @@ function AboutMe() {
     )
 
     return(
-        <section className='about-section'>
+        <section id="about" className='about-section'>
             <h1 className='about-title'>About Me</h1>
             <div className="about-me">
                 <div className='side-content'>

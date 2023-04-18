@@ -22,7 +22,7 @@ export const Contact = () => {
     };
   
     return (
-      <form ref={form} onSubmit={sendEmail} className="contact-field">
+      <form ref={form} onSubmit={sendEmail} className="contact-field" id="contact">
         <section className='contact-wrapper'>
           <h1 className='contact-subheader'>Contact Me</h1>
           <label>Name</label>

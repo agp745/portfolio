@@ -18,7 +18,7 @@ function Projects() {
     }
     
     return(
-        <section class="content">
+        <section class="content" id="projects">
             <h1 className="subheader">Projects</h1>
             <div className="cardsList">
                 <Card project={mgl}/>
