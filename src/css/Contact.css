@@ -1,3 +1,27 @@
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 800px) {
+    .contact-wrapper {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-wrapper {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-wrapper {
+        transform: scale(0.6);
+    }
+}
+
 .contact-field {
     background-color: rgba(36, 36, 36, 0.6);
     display: flex;
@@ -12,7 +36,7 @@
     background-color: rgba(36, 36, 36, 0.9);
     padding: 3rem;
     width: fit-content;
-    border-radius: 3%;
+    border-radius: 2%;
     box-shadow: 5px 5px 8px rgb(10, 10, 10);
 }
 

@@ -1,3 +1,37 @@
+@media (min-width: 1200px) {
+    h1.subheader {
+        font-size: 6.5rem;
+    }
+
+    .card {
+        /* transform: scale(0.6); */
+    }
+
+    .project-image {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    h1.subheader {
+        font-size: 5rem;
+    }
+
+    .project-image {
+        height: 15rem;
+    }
+}
+
+@media (max-width: 600px) {
+    h1.subheader {
+        font-size: 4rem;
+    }
+
+    .project-image {
+        height: 10rem;
+    }
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -8,26 +42,37 @@
 }
 
 h1.subheader {
-    font-size: 6.5rem;
     margin-bottom: 6rem;
 }
 
 .cardsList {
     display: flex;
     gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
-    max-width: 20rem;
-    /* overflow: hidden; */
-    background-color: hsl(0, 0%, 30%);
-    padding: 3rem;
+    background-image: url(../assets/sks-painting.jpeg);
+    background-repeat: no-repeat;
+    z-index: -1;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 2%;
+    box-shadow: 10px 10px 5px rgb(20, 20, 20);
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
-.project-image {
-    height: 10rem;
+.card-link {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.card-link:hover {
+    color: rgba(255, 255, 255, 0.87);
 }

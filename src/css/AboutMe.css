@@ -1,3 +1,84 @@
+@media (min-width: 1200px) {
+    .about-title {
+        font-size: 6.5rem;
+    }
+
+    .side-content {
+        margin-left: 5rem;
+    }
+
+    .headshot {
+        max-width: 20rem;
+    }
+
+    h2.about-name {
+        font-size: 4rem;
+    }
+
+    .main-content {
+        margin-right: 5rem;
+        font-size: 2rem;
+    }
+
+    div.about-job {
+        font-size: 2.5rem;
+    }
+
+    .phone-email {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-title {
+        font-size: 5rem;
+    }
+
+    .main-content {
+        font-size: 1.5rem;
+        margin: 0 5rem;
+    }
+
+    .headshot {
+        max-width: 15rem;
+    }
+
+    .side-content {
+        margin-left: 0;
+    }
+
+    .about-name {
+        font-size: 3rem;
+    }
+
+    .about-job {
+        font-size: 2rem;
+    }
+
+    .phone-email {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        font-size: 1.2rem;
+    }
+
+    .about-title {
+        font-size: 4rem;
+    }
+
+    .main-content {
+        word-wrap: break-word;
+    }
+}
+
 .about-section {
     background-color: rgba(36, 36, 36, 0.6);
 }
@@ -15,7 +96,6 @@
 
 .about-title {
     text-align: center;
-    font-size: 6.5rem;
     margin: 0;
 }
 
@@ -23,30 +103,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 5rem;
     margin-top: 5rem;
     text-align: center;
 }
 
 .headshot {
-    max-width: 20rem;
     border-radius: 100%;
 }
 
 h2.about-name {
-    font-size: 4rem;
     margin: 0;
-}
-
-div.about-job {
-    font-size: 2.5rem;
-}
-
-.phone-email {
-    font-size: 2rem;
-}
-
-.main-content {
-    font-size: 2rem;
-    margin-right: 5rem;
 }

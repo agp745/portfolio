@@ -1,9 +1,32 @@
+@media (min-width: 1200px) {
+    .header {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        gap: 0.5rem;
+    }
+}
+
 .header {
     display: flex;
     justify-content: center;
-    gap: 3rem;
     background-color: rgb(36, 36, 36);
-    padding: 1rem
+    padding: 1rem;
 }
 
 .nav-item::before {
