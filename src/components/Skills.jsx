@@ -10,7 +10,7 @@ function Icon(props) {
 
         <div className="icon">
             <img
-                src={`./src/assets/SVGs/${tech}-icon.svg`}
+                src={`/assets/SVGs/${tech}-icon.svg`}
                 className='icon'
                 onMouseEnter={() => setHoveredIcon(tech)}
                 onMouseLeave={() => setHoveredIcon(null)}

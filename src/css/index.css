@@ -22,7 +22,7 @@ body::before {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url(../assets/sks-painting.jpeg);
+    background-image: url(/assets/sks-painting.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: center; */

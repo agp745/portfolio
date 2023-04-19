@@ -7,12 +7,12 @@ export default function Mgl() {
             <HeaderProjects />
             <section className="main-info">
                 <div className="left">
-                    <img src="./src/assets/mgl-img.png"/>
+                    <img src="/assets/mgl-img.png"/>
                 </div>
                 <div className="right">
                     <h1>My Gamer List</h1>
-                    <div><i>repo:</i> <a href="https://github.com/agp745/MyGamerListApp" className='main-link'>github.com/agp745/MyGamerListApp</a></div>
-                    <div><i>website:</i> <a href="https://mygamerlist.onrender.com/" className='main-link'>mygamerlist.onrender.com</a></div>
+                    <div><i>repo:</i> <a href="https://github.com/agp745/MyGamerListApp" target="_blank" className='main-link'>github.com/agp745/MyGamerListApp</a></div>
+                    <div><i>website:</i> <a href="https://mygamerlist.onrender.com/" target="_blank" className='main-link'>mygamerlist.onrender.com</a></div>
                 </div>
             </section>
 
@@ -26,10 +26,10 @@ export default function Mgl() {
                 <p>On this project, I was responsible for developing the end-to-end functionality, including API integration and creation of pop-out menus</p>
                 <div className='technologies'>
                     <h2>Built With</h2>
-                    <img src="./src/assets/SVGs/html5-icon.svg" alt="HTML5" />
-                    <img src="./src/assets/SVGs/css3-icon.svg" alt="CSS3" />
-                    <img src="./src/assets/SVGs/tailwindcss-icon.svg" alt="TailwindCSS" />
-                    <img src="./src/assets/SVGs/javascript-icon.svg" alt="JavaScript" />
+                    <img src="/assets/SVGs/html5-icon.svg" alt="HTML5" />
+                    <img src="/assets/SVGs/css3-icon.svg" alt="CSS3" />
+                    <img src="/assets/SVGs/tailwindcss-icon.svg" alt="TailwindCSS" />
+                    <img src="/assets/SVGs/javascript-icon.svg" alt="JavaScript" />
                 </div>
             </section>
         </div>

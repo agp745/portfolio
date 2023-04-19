@@ -7,13 +7,13 @@ export default function Projectied() {
             <HeaderProjects />
             <section className="main-info">
                 <div className="left">
-                    <img src="./src/assets/projectied-img.png"/>
+                    <img src="/assets/projectied-img.png"/>
                 </div>
                 <div className="right">
                     <h1>Projectied</h1>
-                    <div><i>repo:</i> <a href="https://github.com/agp745/projectied" className='main-link'>github.com/agp745/projectied</a></div>
-                    <div><i>website:</i> <a href="https://projectied.onrender.com/" className='main-link'>projectied.onrender.com</a></div>
-                    <div><i>live demo:</i> <a href="https://youtu.be/U4b1pxl-634" className='main-link'>youtu.be/U4b1pxl-634</a></div>
+                    <div><i>repo:</i> <a href="https://github.com/agp745/projectied" target="_blank" className='main-link'>github.com/agp745/projectied</a></div>
+                    <div><i>website:</i> <a href="https://projectied.onrender.com/" target="_blank" className='main-link'>projectied.onrender.com</a></div>
+                    <div><i>live demo:</i> <a href="https://youtu.be/U4b1pxl-634" target="_blank" className='main-link'>youtu.be/U4b1pxl-634</a></div>
                 </div>
             </section>
 
@@ -35,12 +35,12 @@ export default function Projectied() {
                 </div>
                 <div className='technologies'>
                     <h2>Built With</h2>
-                    <img src="./src/assets/SVGs/html5-icon.svg" alt="HTML5" />
-                    <img src="./src/assets/SVGs/css3-icon.svg" alt="CSS3" />
-                    <img src="./src/assets/SVGs/javascript-icon.svg" alt="JavaScript" />
-                    <img src="./src/assets/SVGs/nodejs-icon.svg" alt="Node.js" />
-                    <img src="./src/assets/SVGs/postgresql-icon.svg" alt="PostgreSQL" />
-                    <img src="./src/assets/SVGs/auth0-icon.svg" alt="Auth0" />
+                    <img src="/assets/SVGs/html5-icon.svg" alt="HTML5" />
+                    <img src="/assets/SVGs/css3-icon.svg" alt="CSS3" />
+                    <img src="/assets/SVGs/javascript-icon.svg" alt="JavaScript" />
+                    <img src="/assets/SVGs/nodejs-icon.svg" alt="Node.js" />
+                    <img src="/assets/SVGs/postgresql-icon.svg" alt="PostgreSQL" />
+                    <img src="/assets/SVGs/auth0-icon.svg" alt="Auth0" />
                 </div>
             </section>
 

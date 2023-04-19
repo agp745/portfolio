@@ -17,7 +17,7 @@ function AboutMe() {
             <h1 className='about-title'>About Me</h1>
             <div className="about-me">
                 <div className='side-content'>
-                    <img src="./src/assets/portfolio-headshot.png" className='headshot' />
+                    <img src="/assets/portfolio-headshot.png" className='headshot' />
                     <h2 className='about-name'>Alejandro (Alex) Perez</h2>
                     <div className='about-job'>Software Developer</div>
                     <div className='about-job'>Houston, TX</div>
