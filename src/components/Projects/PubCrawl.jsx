@@ -13,7 +13,7 @@ export default function PubCrawl() {
                     <h1>Pub Crawl</h1>
                     <div><i>repo:</i> <a href="https://github.com/agp745/PubCrawl" target="_blank" className='main-link'>github.com/agp745/PubCrawl</a></div>
                     <div><i>website:</i> <a href="https://pubcrawl.vercel.app/" target="_blank" className='main-link'>pubcrawl.vercel.app/</a></div>
-                    <div><i>live demo:</i> <a href="" target="_blank" className='main-link'>tbd</a></div>
+                    {/* <div><i>live demo:</i> <a href="" target="_blank" className='main-link'>tbd</a></div> */}
                 </div>
             </section>
 
