@@ -76,3 +76,20 @@ h1.subheader {
 .card-link:hover {
     color: rgba(255, 255, 255, 0.87);
 }
+
+.techsList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-weight: lighter;
+    font-size: 1rem;;
+    color: rgb(36, 36, 36);
+}
+
+.tech {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: .15rem .5rem;
+    border-radius: 10%;
+}

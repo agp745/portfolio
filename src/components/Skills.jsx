@@ -76,6 +76,9 @@ export default function Skills() {
             <a href="https://www.mongodb.com/" target="_blank" className="icon-link">
                 <Icon {...stateObj} tech="mongodb" />
             </a>
+            <a href="https://supabase.com/" target="_blank" className="icon-link">
+                <Icon {...stateObj} tech="supabase" />
+            </a>
             <a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank" className="icon-link">
                 <Icon {...stateObj} tech="bash" />
             </a>
