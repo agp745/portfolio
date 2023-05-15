@@ -19,12 +19,13 @@ export default function PubCrawl() {
 
             <section className='body-info'>
                 <p>
-                Projectied (pronounced: "project-tied") is a collaborative management app that allows users to create projects/lists and organize their tasks within each project. Users can add collaborators to their projects, so multiple people can work on them at once. The app offers the following features:
+                Welcome to Pub Crawl, an app that helps you find breweries and discover beers! This app allows users to explore breweries near their location or in any city worldwide. It also provides detailed information about each beer, including its ABV (Alcohol by Volume), IBU (International Bitterness Units), and more. Users can take advantage of the passwordless login process powered by Supabase and save their favorite beers to their profile. The app offers the following features:
                 </p>
                 <ul>
-                    <li><b>Create projects:</b> Users can create projects/lists and add tasks to them.</li>
-                    <li><b>Organize tasks:</b> Within each project, users can organize tasks into three categories: Todo , Active, and Completed.</li>
-                    <li><b>Collaborate with others:</b> Users can invite collaborators to their projects/lists, and everyone can work on tasks together.</li>
+                    <li>Find breweries near your current location or in any city around the world.</li>
+                    <li>Discover beers and get detailed information about each beer, including ABV, IBU, and more.</li>
+                    <li>Passwordless login process powered by Supabase for seamless authentication.</li>
+                    <li>Save interesting beers to your profile for future reference.</li>
                 </ul>
                 
                 <p>Responsible for integrating two APIs (Open Brewery DB & Punk API), designing and implementing the user interface, and configuring authentication functionality.</p>
