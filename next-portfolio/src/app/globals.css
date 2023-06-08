@@ -48,6 +48,14 @@ body::before {
   animation: showText 2s ease forwards;
 }
 
+.SHOW_MENU {
+    animation: showMenu 0.5s ease forwards;
+}
+
+.HIDE_MENU {
+    animation: hideMenu 0.5s ease forwards;
+}
+
 @keyframes showText {
     0% {
         opacity: 0;
@@ -56,5 +64,23 @@ body::before {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes showMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideMenu {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
