@@ -3,47 +3,30 @@
 import Image from "next/image"
 import { useState } from "react"
 
-const Icon = (props) => {
-
-    const {hoveredIcon, setHoveredIcon, tech} = props
-    const isHovered = hoveredIcon === tech
-
-    return(
-
-        <div className="icon">
-            <Image
-                src={`/icons/${tech}-icon.svg`}
-                alt={`${tech} icon`}
-                className='icon'
-                onMouseEnter={() => setHoveredIcon(tech)}
-                onMouseLeave={() => setHoveredIcon(null)}
-            />
-            {isHovered && (
-                <div className="icon-name">
-                    <span>{tech}</span>
-                </div>
-            )}
-        </div>
-    )
+interface SkillProps {
+    link: string,
+    tech: string
 }
 
+export const Skill = ({ link, tech }: SkillProps) => {
 
-export const Skills = () => {
+    const [isHovered, setIsHovered] = useState<boolean>(false)
 
-    const [hoveredIcon, setHoveredIcon] = useState(null)
-
-    const stateObj = {
-        hoveredIcon: hoveredIcon,
-        setHoveredIcon: setHoveredIcon,
-    }
-
-    return(
-        <section className="skills">
-
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" className="icon-link">
-                <Icon {...stateObj} tech="html5" />
-            </a>
-            
-        </section>
+    return (
+    <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="relative flex flex-col items-center gap-3 text-center hover:-translate-y-2 transition-all duration-100 ease-in"
+    >
+        <a href={link} target="_blank">
+            <Image 
+                src={`/icons/${tech}-icon.svg`}
+                alt={`${tech}-icon`}
+                width={50}
+                height={50}
+            />
+        </a>
+        {isHovered && <div className='absolute -bottom-7 uppercase font-semibold text-slate-100 text-md SHOW_TEXT_STATIC'>{tech}</div>}
+    </div>
     )
 }

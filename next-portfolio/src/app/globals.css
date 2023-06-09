@@ -48,6 +48,10 @@ body::before {
   animation: showText 2s ease forwards;
 }
 
+.SHOW_TEXT_STATIC {
+    animation: showMenu 0.5s ease forwards;
+}
+
 .SHOW_MENU {
     animation: showMenu 0.5s ease forwards;
 }
