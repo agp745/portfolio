@@ -9,26 +9,29 @@ const WideScreen = () => {
     const linkStyles = "brightness-90 hover:brightness-105 hover:translate-y-1 transition-all duration-100 ease-in"
 
     return (
-        <div className="sm:flex justify-end items-center h-full gap-6 mr-10">
+        <div className="sm:flex justify-end items-center">
+            <div className="sm:flex justify-end items-center h-full py-1 w-52 bg-gradient-to-l from-black to-[rgba(0,0,0,0)]">&nbsp;</div>
+            
+            <div className="sm:flex justify-end items-center h-full gap-6 py-1 pr-10 bg-black">
             <Link
                 href={"#"}
                 target="_blank"
                 className={linkStyles}
-            >
+                >
                 About
             </Link>
             <Link
                 href={"#"}
                 target="_blank"
                 className={linkStyles}
-            >
+                >
                 Projects
             </Link>
             <Link
                 href={"#"}
                 target="_blank"
                 className={linkStyles}
-            >
+                >
                 Contact
             </Link>
             <div>|</div>
@@ -36,23 +39,24 @@ const WideScreen = () => {
                 href={"https://github.com/agp745"}
                 target="_blank"
                 className={linkStyles}
-            >
+                >
                 GitHub
             </Link>
             <Link
                 href={"https://www.linkedin.com/in/alejandro-perez-dev745/"}
                 target="_blank"
                 className={linkStyles}
-            >
+                >
                 LinkedIn
             </Link>
             <Link
                 href={"/TECH_RESUME.pdf"}
                 target="_blank"
                 className={linkStyles}
-            >
+                >
                 Resume
             </Link>
+            </div>
         </div>
     )
 }
@@ -142,8 +146,8 @@ const SmallScreen = () => {
 export const Header = () => {
     return (
         <nav className="fixed top-0 left-0 right-0">
-            <SmallScreen />
-            {/* <WideScreen /> */}
+            {/* <SmallScreen /> */}
+            <WideScreen />
         </nav>
     )
 }
