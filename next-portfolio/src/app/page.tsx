@@ -2,6 +2,7 @@ import { Hero } from '@/components/hero'
 import { Header } from '@/components/header'
 import { Skill } from '@/components/skills'
 import { About } from '@/components/about'
+import { ProjectCard } from '@/components/projectCard'
 
 export default function Home() {
   return (
@@ -89,6 +90,13 @@ export default function Home() {
       </section>
       <section className='PAGE_2'>
         <About />
+      </section>
+      <section className='PAGE_3 flex h-screen bg-black'>
+        <ProjectCard 
+          title='EzGo'
+          link={'/project/ezgo'}
+          image='/projects/ezgo.png'
+        />
       </section>
       <Header />
     </main>
