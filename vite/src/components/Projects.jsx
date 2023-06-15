@@ -48,14 +48,31 @@ export default function Projects() {
         link: '',
         techs: ['typescript', 'react', 'tailwindcss', 'supabase']
     }
+
+    const ezgo = {
+        title: "EzGo",
+        description: "",
+        imageURL: "/assets/ezgo.png",
+        link: "https://ezgo.vercel.app/",
+        techs: ['nextjs', 'tailwindcss', 'mongodb', 'prisma']
+    }
     
     return(
         <section class="content" id="projects">
             <h1 className="subheader">Projects</h1>
                 <div className="cardsList">
-                    <Link to="/mgl" className="card-link"><Card project={mgl}/></Link>
-                    <Link to="/projectied" className="card-link"><Card project={projectied}/></Link>
-                    <Link to="/pubcrawl" className="card-link"><Card project={pubcrawl}/></Link>
+                    <Link to="/mgl" className="card-link">
+                        <Card project={mgl}/>
+                    </Link>
+                    <Link to="/projectied" className="card-link">
+                        <Card project={projectied}/>
+                    </Link>
+                    <Link to="/pubcrawl" className="card-link">
+                        <Card project={pubcrawl}/>
+                    </Link>
+                    <Link to="/ezgo" className='card-link'>
+                        <Card project={ezgo}/>
+                    </Link>
                 </div>
         </section>
     )

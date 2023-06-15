@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Projectied from './components/Projects/Projectied'
 import Mgl from './components/Projects/Mgl'
 import PubCrawl from './components/Projects/PubCrawl'
+import EzGo from './components/Projects/EzGo'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -14,7 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/' element={<App />} />
         <Route path='/projectied' element={<Projectied />} />
         <Route path='/mgl' element={<Mgl />} />
-        <Route path='pubcrawl' element={<PubCrawl />} />
+        <Route path='/pubcrawl' element={<PubCrawl />} />
+        <Route path='/ezgo' element={<EzGo />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
