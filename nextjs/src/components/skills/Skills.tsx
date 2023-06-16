@@ -26,7 +26,7 @@ export const Skill = ({ link, tech }: SkillProps) => {
                 height={50}
             />
         </a>
-        {isHovered && <div className='absolute -bottom-7 uppercase font-semibold text-slate-100 text-md SHOW_TEXT_STATIC'>{tech}</div>}
+        {isHovered && <div className='absolute -bottom-7 uppercase font-semibold text-slate-100 text-sm SHOW_TEXT_STATIC'>{tech}</div>}
     </div>
     )
 }
