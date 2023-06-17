@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Url } from "url"
 
 interface ProjectCardProps {
     image: string,
@@ -10,14 +9,16 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ image, title, link }: ProjectCardProps) => {
     return (
-        <Link href={link}>
-            <Image
+        <Link 
+            href={link}
+            className="bg-blue-400 drop-shadow-2xl"
+        >
+            <img
                 src={image}
                 alt={title}
-                width={30}
-                height={30}
+                className="w-auto h-56"
             />
-            <div>{title}</div>
+            <div className="">{title}</div>
         </Link>
     )
 }

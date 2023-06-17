@@ -145,7 +145,7 @@ const SmallScreen = () => {
 
 export const Header = () => {
 
-    const [screenWidth, setScreenWidth] = useState<number>(0)
+    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth)
 
     useEffect(() => {
         addEventListener("resize",() => setScreenWidth(window.innerWidth))
