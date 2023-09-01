@@ -1,3 +1,5 @@
+'use client'
+//MAKE IT RSC
 import { Hero } from '@/components/hero'
 import { Header } from '@/components/header'
 import { Skill } from '@/components/skills'
@@ -26,7 +28,7 @@ function SkillsSection() {
 }
 
 function ProjectsSection() {
-  const projects = projectsArray.map((project, index) => {
+  const projects = projectsArray.map((project) => {
     return (
       <ProjectCard 
         title={project.title}

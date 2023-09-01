@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon, MinusIcon } from "@heroicons/react/24/outline"
 
 const WideScreen = () => {
 
-    const linkStyles = "brightness-90 hover:brightness-105 hover:translate-y-1 transition-all duration-100 ease-in"
+    const linkStyles = "brightness-90 hover:brightness-105 transition-all duration-100 ease-in"
 
     return (
         <div className="sm:flex justify-end items-center">
