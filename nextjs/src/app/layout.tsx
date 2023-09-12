@@ -1,11 +1,17 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const generalSans = localFont({
+  src: '../../public/fonts/GeneralSans-Variable.woff2',
+  // variable: '--font-general-sans'
+})
+
 export const metadata = {
   title: 'AGP Dev',
-  description: 'personal portfolio',
+  description: 'portfolio',
 }
 
 export default function RootLayout({
@@ -15,7 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      {/* <body className={`${generalSans.variable}`}>{children}</body> */}
+      <body className={generalSans.className}>{children}</body>
     </html>
   )
 }

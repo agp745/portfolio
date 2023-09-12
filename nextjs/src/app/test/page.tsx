@@ -1,19 +1,21 @@
-'use client'
 
-import { useState, useEffect } from "react"
+import { PCard } from "@/components/card"
 
 export default function Test() {
 
-    const [screenWidth, setScreenWidth] = useState<number | null>(null)
-
-    useEffect(() => {
-        addEventListener("resize",() => setScreenWidth(window.innerWidth))
-        
-    }, [])
-
     return (
-        <>
-            <h1 className="text-3xl">{screenWidth}</h1>
-        </>
+        <main className="h-screen w-screen relative">
+            <div className="text-6xl font-bold">Hello World</div>
+            <PCard 
+                title="test"
+                image="projects/ezgo.png"
+                technologies={['typescript', 'docker']}
+                link={{
+                    github: 'https://github.com/agp745/resizer-cli#readme',
+                    demo: 'youtube.com',
+                    site: 'linkedin.com'
+                }}
+            />
+        </main>
     )
 }
