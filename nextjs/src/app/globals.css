@@ -21,6 +21,7 @@ body::before {
     /* background-position: center; */
 }
 
+
 .SHOW_TEXT_1s {
   animation: showText 1s ease forwards;
 }
