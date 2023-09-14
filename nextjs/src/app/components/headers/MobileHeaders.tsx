@@ -30,18 +30,17 @@ export function MobileHeader({ children }: { children: React.ReactNode }) {
     return (
     <h2 
         ref={headerRef}
-        // className="text-lg font-normal tracking-wide sticky top-0 uppercase z-20"
         className={cn(
             'sticky top-0 z-20 transition duration-50 ease-in py-1',
             {
-                'bg-red-500/80 rounded-sm': isSticky
+                'bg-sky-500/80 rounded-b': isSticky
             }
         )}
     >
         <p className={cn(
             'uppercase text-lg font-light tracking-wider translate-x-0 transition ',
             {
-                'translate-x-5 font-medium': isSticky
+                'translate-x-5 font-medium text-neutral-100': isSticky
             }
         )}>
             {children}

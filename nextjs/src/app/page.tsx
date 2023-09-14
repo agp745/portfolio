@@ -44,7 +44,7 @@ export default function Home() {
 
         <SpaceTop size={10} />
 
-        <MainSection className='overflow-y-scroll px-2'>
+        <MainSection className='overflow-y-scroll overflow-x-hidden px-2'>
           <div id='about' className='font-normal pb-12'>
             <SpaceTop size={3} />
             <MobileHeader>about</MobileHeader>
@@ -67,7 +67,7 @@ export default function Home() {
             />
           </div>
 
-          <div id='projects' className='flex flex-col gap-4 pb-12'>
+          <div id='projects' className='flex flex-col gap-4 pb-4'>
             <MobileHeader>projects</MobileHeader>
             <SpaceTop size={3} />
             <ProjectCard

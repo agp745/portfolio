@@ -37,7 +37,7 @@ export function ProjectCard({ title, description, technologies, link , className
             </div>
             <p className='font-normal text-sm text-neutral-400'>{description}</p>
             <div className='flex gap-1 flex-wrap pt-2'>
-                {technologies.map((tech, index) => <div key={index} className='bg-blue-500 rounded-full px-2 font-normal text-sm'>
+                {technologies.map((tech, index) => <div key={index} className='bg-blue-500 rounded-full px-2 font-normal text-sm border border-blue-900'>
                     {tech}
                 </div>)}
             </div>

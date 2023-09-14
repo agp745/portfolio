@@ -23,7 +23,7 @@ export function ExperienceCard({ position, company, description, dates, technolo
             <h3 className='font-medium text-white'>{position} - {company}</h3>
             <p className='font-normal text-sm text-neutral-400'>{description}</p>
             <div className='flex gap-1 flex-wrap pt-2'>
-                {technologies.map((tech, index) => <div key={index} className='bg-blue-500 rounded-full px-2 font-normal text-sm'>
+                {technologies.map((tech, index) => <div key={index} className='bg-blue-500 rounded-full px-2 font-normal text-sm border border-blue-900'>
                     {tech}
                 </div>)}
             </div>
