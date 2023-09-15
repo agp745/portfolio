@@ -57,7 +57,7 @@ export default function Home() {
                 My primary focus revolves around building full-stack software and user interfaces using technologies like TypeScript, Next.js, and Docker. During my free time, I like to explore and integrate modern technologies such as AWS Lambda and GoLang into my personal projects. Additionally, I delve into the intricacies of data structures and algorithms to further hone my skills.
               </p>
               <p>
-                When I am not on the computer, you can catch me playing piano, immersing myself in the world of noise rock, or figuring out new ways to brew my coffee.
+                When I am not on the computer, you can catch me playing piano, immersing myself in the world of noise rock, or figuring out new ways to brew my coffee. 
               </p>
             </div>
           </Section>
