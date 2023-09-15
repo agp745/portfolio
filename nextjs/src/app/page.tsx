@@ -44,7 +44,7 @@ export default function Home() {
 
         <SpaceTop size={10} />
 
-        <MainSection className='overflow-y-scroll overflow-x-hidden px-2'>
+        <MainSection className='overflow-y-scroll overflow-x-hidden px-2 sm:px-10 md:px-12'>
           <div id='about' className='font-normal pb-12'>
             <SpaceTop size={3} />
             <MobileHeader>about</MobileHeader>
@@ -54,64 +54,68 @@ export default function Home() {
 
           <div id='experience' className='flex flex-col gap-4 pb-12'>
             <MobileHeader>experience</MobileHeader>
-            <SpaceTop size={3} />
-            <ExperienceCard 
-              position='Freelance Web Developer'
-              company='MM General Contracting'
-              dates={{
-                from: 'June 2023',
-                to: 'Present' 
-              }}
-              description="Independently spearheaded the creation of MM General Contracting's website, architecting a dynamic online presence from inception using modern technologies. Engineered a command-line interface (CLI) tool resulting in a substantial reduction in image sizes. This enhancement translated to notable improvements in website load times and image optimization, ultimately enhancing the overall user experience."
-              technologies={['Typescript','React', 'React Router', 'TailwindCSS', 'Docker']}
-            />
+            <div className='md:flex md:flex-col md:items-center md:gap-4'>
+              <SpaceTop size={3} />
+              <ExperienceCard 
+                position='Freelance Web Developer'
+                company='MM General Contracting'
+                dates={{
+                  from: 'June 2023',
+                  to: 'Present' 
+                }}
+                description="Independently spearheaded the creation of MM General Contracting's website, architecting a dynamic online presence from inception using modern technologies. Engineered a command-line interface (CLI) tool resulting in a substantial reduction in image sizes. This enhancement translated to notable improvements in website load times and image optimization, ultimately enhancing the overall user experience."
+                technologies={['Typescript','React', 'React Router', 'TailwindCSS', 'Docker']}
+              />
+            </div>
           </div>
 
           <div id='projects' className='flex flex-col gap-4 pb-4'>
             <MobileHeader>projects</MobileHeader>
-            <SpaceTop size={3} />
-            <ProjectCard
-              title='resizer-cli'
-              description='A command-line interface (CLI) tool that utilizes FFMPEG to resize all images in a specified folder.'
-              technologies={['Node.js', 'Typescript', 'Docker', 'FFMPEG']}
-              link='https://github.com/agp745/resizer-cli#readme'
-            />
-            <ProjectCard 
-              title='Application Tracker'
-              description='A sophisticated job application tracker, offering a sleek and intuitive
-              platform to manage and monitor job applications effectively.'
-              technologies={['Next.js', 'Typescript', 'TailwindCSS', 'Supabase', 'Prisma', 'NextAuth', 'AWS Lambda', 'AWS EventBridge']}
-              link='https://app-tracker-three.vercel.app/login?callbackUrl=https://app-tracker-three.vercel.app/'
-            />
-            <ProjectCard 
-              title='EzGo'
-              description='EzGo is a project aimed at providing users with a platform to plan their commutes using
-              eco-friendly modes of transportation.'
-              technologies={['Next.js', 'Javascript', 'Redux Toolkit', 'TailwindCSS', 'MongoDB', 'Prisma', 'NextAuth']}
-              link='https://ezgo.vercel.app/'
-            />
-            <ProjectCard 
-              title='Pub Crawl'
-              description='a dynamic application that simplifies pub exploration, allowing users to
-              effortlessly discover and explore local pubs, access comprehensive information on various beers, and
-              find exciting venues in different cities.'
-              technologies={['React', 'Typescript', 'Redux Toolkit', 'TailwindCSS', 'Supabase']}
-              link='https://pubcrawl.vercel.app/'
-            />
-            <ProjectCard 
-              title='Projectied'
-              description=' Collaborative management app that allows users to create projects/lists and organize their tasks within
-              each project.'
-              technologies={['Node.js', 'Javascript', 'HTML', 'CSS', 'PostgreSQL', 'Auth0']}
-              link='https://projectied.onrender.com/'
-            />
-            <ProjectCard 
-              title='My Gamer List'
-              description='Video game database search app for Gamers to help and encourage discovery of new (& old) gaming
-              experiences.'
-              technologies={['Javascript', 'HTML', 'CSS', 'TailwindCSS']}
-              link='https://mygamerlist.onrender.com/'
-            />
+            <div className='md:flex md:flex-col md:items-center md:gap-4'>
+              <SpaceTop size={3} />
+              <ProjectCard
+                title='resizer-cli'
+                description='A command-line interface (CLI) tool that utilizes FFMPEG to resize all images in a specified folder.'
+                technologies={['Node.js', 'Typescript', 'Docker', 'FFMPEG']}
+                link='https://github.com/agp745/resizer-cli#readme'
+              />
+              <ProjectCard 
+                title='Application Tracker'
+                description='A sophisticated job application tracker, offering a sleek and intuitive
+                platform to manage and monitor job applications effectively.'
+                technologies={['Next.js', 'Typescript', 'TailwindCSS', 'Supabase', 'Prisma', 'NextAuth', 'AWS Lambda', 'AWS EventBridge']}
+                link='https://app-tracker-three.vercel.app/login?callbackUrl=https://app-tracker-three.vercel.app/'
+              />
+              <ProjectCard 
+                title='EzGo'
+                description='EzGo is a project aimed at providing users with a platform to plan their commutes using
+                eco-friendly modes of transportation.'
+                technologies={['Next.js', 'Javascript', 'Redux Toolkit', 'TailwindCSS', 'MongoDB', 'Prisma', 'NextAuth']}
+                link='https://ezgo.vercel.app/'
+              />
+              <ProjectCard 
+                title='Pub Crawl'
+                description='a dynamic application that simplifies pub exploration, allowing users to
+                effortlessly discover and explore local pubs, access comprehensive information on various beers, and
+                find exciting venues in different cities.'
+                technologies={['React', 'Typescript', 'Redux Toolkit', 'TailwindCSS', 'Supabase']}
+                link='https://pubcrawl.vercel.app/'
+              />
+              <ProjectCard 
+                title='Projectied'
+                description=' Collaborative management app that allows users to create projects/lists and organize their tasks within
+                each project.'
+                technologies={['Node.js', 'Javascript', 'HTML', 'CSS', 'PostgreSQL', 'Auth0']}
+                link='https://projectied.onrender.com/'
+              />
+              <ProjectCard 
+                title='My Gamer List'
+                description='Video game database search app for Gamers to help and encourage discovery of new (& old) gaming
+                experiences.'
+                technologies={['Javascript', 'HTML', 'CSS', 'TailwindCSS']}
+                link='https://mygamerlist.onrender.com/'
+              />
+            </div>
           </div>
         </MainSection>
         

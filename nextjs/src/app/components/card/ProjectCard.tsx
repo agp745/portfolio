@@ -20,7 +20,7 @@ export function ProjectCard({ title, description, technologies, link , className
 
     return (
     <a href={link} target='_blank' className={cn(
-        'flex bg-black rounded-md bg-cover bg-no-repeat',
+        'flex bg-black rounded-md bg-cover bg-no-repeat md:max-w-xl',
         className,
         {
             'bg-[url(/projects/ezgo.png)]': title === 'EzGo',

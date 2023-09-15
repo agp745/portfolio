@@ -13,7 +13,7 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ position, company, description, dates, technologies }: ExperienceCardProps) {
     return (
-    <div className="flex flex-col bg-black p-4 rounded-md">
+    <div className="flex flex-col bg-black p-4 rounded-md md:max-w-xl">
         <div className="flex items-center gap-1 w-full text-sm text-neutral-400 font-medium">
             <div>{dates.from}</div>
             <DividerHorizontalIcon /> 
