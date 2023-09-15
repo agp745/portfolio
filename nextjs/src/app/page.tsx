@@ -51,7 +51,7 @@ export default function Home() {
             <SpaceTop size={7} />
             <div className='flex flex-col gap-2 text-sm sm:text-base'>
               <p>
-                Back in 2017, I discovered my passion for creative collaboration through music. Fast forward to today, and I'm a classically trained composer and conductor who now channels that same drive into software engineering.
+                Back in 2017, I discovered my passion for creative collaboration through music. Fast forward to today, and I&apos;m a classically trained composer and conductor who now channels that same drive into software engineering.
               </p>
               <p>
                 My primary focus revolves around building full-stack software and user interfaces using technologies like TypeScript, Next.js, and Docker. During my free time, I like to explore and integrate modern technologies such as AWS Lambda and GoLang into my personal projects. Additionally, I delve into the intricacies of data structures and algorithms to further hone my skills.

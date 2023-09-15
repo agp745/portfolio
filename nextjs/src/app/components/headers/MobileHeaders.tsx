@@ -25,7 +25,7 @@ export function MobileHeader({ children }: { children: React.ReactNode }) {
                 setIsSticky(false)
             }
         }
-    }, [scrollPosition])
+    }, [scrollPosition, initialOffset])
 
     return (
     <h2 
