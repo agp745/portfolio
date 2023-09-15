@@ -1,17 +1,19 @@
 import Link from 'next/link'
 import { GitHubLogoIcon, LinkedInLogoIcon, FileTextIcon } from '@radix-ui/react-icons'
-import { ProjectCard } from './components/card/ProjectCard'
-import { ExperienceCard } from './components/card/ExperienceCard'
+import { ProjectCard } from './components/cards/ProjectCard'
+import { ExperienceCard } from './components/cards/ExperienceCard'
 import { MobileHeader } from './components/headers/MobileHeaders'
+import { DesktopHeaders } from './components/headers/DesktopHeaders'
 import { SpaceTop } from './components/Space'
 
-import { MainSection } from './components/MainSection'
+import { Main } from './components/Main'
+import { Section } from './components/Section'
 
 export default function Home() {
   return (
     <div className="flex justify-center items-center w-screen h-screen text-neutral-50 font-extralight">
 
-      <main className="w-[90%] h-[90%] border border-neutral-200 backdrop-blur-sm relative flex flex-col">
+      <main className="w-[90%] h-[90%] border border-neutral-200 backdrop-blur-sm relative flex flex-col lg:flex-row lg:justify-between">
 
         <header className="font-extralight flex flex-col p-5">
 
@@ -30,31 +32,39 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className=' hidden lg:flex lg:flex-col lg:gap-1 lg:pt-20 lg:font-normal'>
-            <Link href='/#'>about</Link>
-            <Link href='/#'>experience</Link>
-            <Link href='/#'>projects</Link>
-            <Link href='/SoftwareResume.pdf' target='_blank' className='flex items-center gap-1'>
-              <FileTextIcon />
-              <div>resume</div>
-            </Link>
-          </div>
+          <DesktopHeaders className='hidden lg:flex lg:flex-col lg:gap-2 lg:pt-20 lg:font-normal'/>
+          {/* <div className='hidden lg:flex lg:flex-col lg:gap-2 lg:pt-20 lg:font-normal'>
+            <Link href='/#about'>about</Link>
+            <Link href='/#experience'>experience</Link>
+            <Link href='/#projects'>projects</Link>
+            <Link href='/SoftwareResume.pdf' target='_blank' className='pt-10'>resume</Link>
+          </div> */}
 
         </header>
 
         <SpaceTop size={10} />
 
-        <MainSection className='overflow-y-scroll overflow-x-hidden px-2 sm:px-10 md:px-12'>
-          <div id='about' className='font-normal pb-12'>
+        <Main className='overflow-y-scroll overflow-x-hidden px-2 sm:px-10 md:px-12 lg:w-fit'>
+          <Section id='about' className='font-normal pb-12 lg:max-w-xl'>
             <SpaceTop size={3} />
             <MobileHeader>about</MobileHeader>
             <SpaceTop size={7} />
-            <p className='text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A distinctio eveniet quo saepe sed nemo nobis reiciendis voluptate sint consequuntur praesentium, mollitia velit corrupti eos odit dolore iusto ut, aliquid libero explicabo ex! Fugit assumenda dolore recusandae, eum delectus cumque impedit provident.</p>
-          </div>
+            <div className='flex flex-col gap-2 text-sm sm:text-base'>
+              <p>
+                Back in 2017, I discovered my passion for creative collaboration through music. Fast forward to today, and I'm a classically trained composer and conductor who now channels that same drive into software engineering.
+              </p>
+              <p>
+                My primary focus revolves around building full-stack software and user interfaces using technologies like TypeScript, Next.js, and Docker. During my free time, I like to explore and integrate modern technologies such as AWS Lambda and GoLang into my personal projects. Additionally, I delve into the intricacies of data structures and algorithms to further hone my skills.
+              </p>
+              <p>
+                When I am not on the computer, you can catch me playing piano, immersing myself in the world of noise rock, or figuring out new ways to brew my coffee.
+              </p>
+            </div>
+          </Section>
 
-          <div id='experience' className='flex flex-col gap-4 pb-12'>
+          <Section id='experience' className='flex flex-col gap-4 pb-12'>
             <MobileHeader>experience</MobileHeader>
-            <div className='md:flex md:flex-col md:items-center md:gap-4'>
+            <div className='md:flex md:flex-col md:items-center md:gap-4 lg:items-end'>
               <SpaceTop size={3} />
               <ExperienceCard 
                 position='Freelance Web Developer'
@@ -67,11 +77,11 @@ export default function Home() {
                 technologies={['Typescript','React', 'React Router', 'TailwindCSS', 'Docker']}
               />
             </div>
-          </div>
-
-          <div id='projects' className='flex flex-col gap-4 pb-4'>
+          </Section>
+          
+          <Section id='projects' className='flex flex-col gap-4 pb-4'>
             <MobileHeader>projects</MobileHeader>
-            <div className='md:flex md:flex-col md:items-center md:gap-4'>
+            <div className='flex flex-col md:items-center gap-4 lg:items-end'>
               <SpaceTop size={3} />
               <ProjectCard
                 title='resizer-cli'
@@ -116,8 +126,8 @@ export default function Home() {
                 link='https://mygamerlist.onrender.com/'
               />
             </div>
-          </div>
-        </MainSection>
+          </Section>
+        </Main>
         
 
         <footer className="absolute -bottom-5 right-0">

@@ -13,7 +13,7 @@ export function useScrollPosition() {
     return useContext(ScrollPositionContext)
 }
 
-export function MainSection({ children, className }: MainSectionProps) {
+export function Main({ children, className }: MainSectionProps) {
 
     const [scrollPosition, setScrollPosition] = useState<number | undefined>(undefined)
     const mainRef = useRef<HTMLElement | null>(null)

@@ -20,20 +20,21 @@ export function ProjectCard({ title, description, technologies, link , className
 
     return (
     <a href={link} target='_blank' className={cn(
-        'flex bg-black rounded-md bg-cover bg-no-repeat md:max-w-xl',
+        'flex rounded-md bg-cover bg-no-repeat md:max-w-xl shadow-inner border-black group',
         className,
         {
+            'bg-black': title === 'Application Tracker' || title === 'resizer-cli',
             'bg-[url(/projects/ezgo.png)]': title === 'EzGo',
             'bg-[url(/projects/pubcrawl.png)]': title === 'Pub Crawl',
             'bg-[url(/projects/projectied.png)]': title === 'Projectied',
             'bg-[url(/projects/mgl.png)]': title === 'My Gamer List',
         }
     )}>
-        <div className='backdrop-blur-sm bg-black/50 p-4 rounded-md'>
-        <div className='flex flex-col'>
+        <div className='backdrop-blur-sm bg-black/50 lg:bg-black/100 lg:hover:bg-black/50 p-4 rounded-md transition duration-100 ease-in'>
+        <div className='flex flex-col lg:gap-3'>
             <div className='flex gap-1 items-center'>
-                <h3 className='font-medium text-white'>{title}</h3>
-                <ArrowTopRightIcon className='' />
+                <h3 className='font-medium text-white group-hover:text-sky-400 transition duration-100 ease-in'>{title}</h3>
+                <ArrowTopRightIcon className='group-hover:text-sky-500 -translate-x-[2px] translate-y-[3px] group-hover:translate-x-[2px] group-hover:-translate-y-[1px] transition duration-100 ease-in' />
             </div>
             <p className='font-normal text-sm text-neutral-400'>{description}</p>
             <div className='flex gap-1 flex-wrap pt-2'>

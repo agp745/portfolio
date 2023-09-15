@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from "react"
-import { useScrollPosition } from "../MainSection"
+import { useScrollPosition } from "../Main"
 import { cn } from "@/utils/cn"
 
 export function MobileHeader({ children }: { children: React.ReactNode }) {
@@ -31,7 +31,7 @@ export function MobileHeader({ children }: { children: React.ReactNode }) {
     <h2 
         ref={headerRef}
         className={cn(
-            'sticky top-0 z-20 transition duration-50 ease-in py-1',
+            'sticky top-0 z-20 transition duration-50 ease-in py-1 lg:hidden',
             {
                 'bg-sky-500/80 rounded-b': isSticky
             }

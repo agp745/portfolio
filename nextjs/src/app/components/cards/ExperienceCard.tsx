@@ -19,7 +19,7 @@ export function ExperienceCard({ position, company, description, dates, technolo
             <DividerHorizontalIcon /> 
             <div>{dates.to}</div>
         </div>
-        <div className='flex flex-col'>
+        <div className='flex flex-col lg:gap-3'>
             <h3 className='font-medium text-white'>{position} - {company}</h3>
             <p className='font-normal text-sm text-neutral-400'>{description}</p>
             <div className='flex gap-1 flex-wrap pt-2'>
