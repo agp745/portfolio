@@ -1,34 +1,37 @@
-'use client'
+"use client";
 
 import { ReactNode, useState, useRef, createContext, useContext } from "react";
 
 interface MainSectionProps {
-    children: ReactNode
-    className: string
+  children: ReactNode;
+  className: string;
 }
 
-export const ScrollPositionContext = createContext<number | undefined>(undefined)
+export const ScrollPositionContext = createContext<number | undefined>(
+  undefined,
+);
 
 export function useScrollPosition() {
-    return useContext(ScrollPositionContext)
+  return useContext(ScrollPositionContext);
 }
 
 export function Main({ children, className }: MainSectionProps) {
+  const [scrollPosition, setScrollPosition] = useState<number | undefined>(
+    undefined,
+  );
+  const mainRef = useRef<HTMLElement | null>(null);
 
-    const [scrollPosition, setScrollPosition] = useState<number | undefined>(undefined)
-    const mainRef = useRef<HTMLElement | null>(null)
-
-    const handleScroll = () => {
-        if(mainRef.current) {
-            setScrollPosition(mainRef.current.scrollTop)
-        }
+  const handleScroll = () => {
+    if (mainRef.current) {
+      setScrollPosition(mainRef.current.scrollTop);
     }
+  };
 
-    return (
-        <ScrollPositionContext.Provider value={scrollPosition}>
-            <section ref={mainRef} onScroll={handleScroll} className={className}>
-                {children}
-            </section>
-        </ScrollPositionContext.Provider>
-    )
+  return (
+    <ScrollPositionContext.Provider value={scrollPosition}>
+      <section ref={mainRef} onScroll={handleScroll} className={className}>
+        {children}
+      </section>
+    </ScrollPositionContext.Provider>
+  );
 }
