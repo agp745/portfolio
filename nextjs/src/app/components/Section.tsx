@@ -1,37 +1,39 @@
-"use client";
+"use client"
 
 //top - 50.75
 
-import { useRef, useState, useEffect, MutableRefObject } from "react";
-import { useScrollPosition } from "./Main";
-import { useIsVisible } from "./hooks/useIsVisible";
+import { useRef, useState, useEffect, MutableRefObject } from "react"
+import { useScrollPosition } from "./Main"
+import { useSectionContext } from "./hooks/useSection"
+import { useIsVisible } from "./hooks/useIsVisible"
 
 interface SectionProps {
-  children: React.ReactNode;
-  id: string;
-  className: string;
+  children: React.ReactNode
+  id: string
+  className: string
 }
 
-export function Section({ children, id, className }: SectionProps) {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+type SectionStates = "about" | "experience" | "projects"
 
-  const scrollPosition = useScrollPosition();
-  const isVisible = useIsVisible(
-    sectionRef as MutableRefObject<HTMLDivElement>,
-  );
+export function Section({ children, id, className }: SectionProps) {
+  const sectionRef = useRef<HTMLDivElement | null>(null)
+
+  const scrollPosition = useScrollPosition()
+  const { currentSection, setCurrentSection } = useSectionContext()
 
   useEffect(() => {
     if (sectionRef.current) {
-      const top = sectionRef.current.getBoundingClientRect().top;
-      if (top <= 50.75) {
-        console.log(sectionRef.current.id);
+      const top = sectionRef.current.getBoundingClientRect().top
+      if (top <= 100 && top >= -150) {
+        setCurrentSection(sectionRef.current.id as SectionStates)
+        // console.log(currentSection)
       }
     }
-  }, [scrollPosition]);
+  }, [scrollPosition])
 
   return (
     <div id={id} className={className} ref={sectionRef}>
       {children}
     </div>
-  );
+  )
 }
