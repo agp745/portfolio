@@ -11,7 +11,7 @@ const generalSans = localFont({
 });
 
 export const metadata = {
-  title: "AGP Dev",
+  title: "agp745",
   description: "portfolio",
 };
 
