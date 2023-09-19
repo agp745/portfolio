@@ -9,6 +9,7 @@ import { ExperienceCard } from "./components/cards/ExperienceCard";
 import { MobileHeader } from "./components/headers/MobileHeaders";
 import { DesktopHeaders } from "./components/headers/DesktopHeaders";
 import { SpaceTop } from "./components/Space";
+import { DynamicLogo } from "./components/dynamicLogo";
 
 import { Main } from "./components/Main";
 import { Section } from "./components/Section";
@@ -17,36 +18,45 @@ import { StateProvider } from "./components/StateProvider";
 export default function Home() {
   return (
     <StateProvider>
-      <div className="flex h-screen w-screen items-center justify-center font-extralight text-neutral-50">
+      <div className="flex h-[100dvh] w-screen items-center justify-center font-extralight text-neutral-50">
         <main className="relative flex h-[90%] w-[90%] flex-col border border-neutral-200 backdrop-blur-sm lg:flex-row lg:justify-between">
           <header className="flex flex-col p-5 font-extralight">
             <h1 className="text-6xl">Alejandro Perez</h1>
             <p className="pt-1 text-lg">Software Developer</p>
 
-            <div className="flex gap-2 pt-1">
+            <div className="flex gap-2 pt-2 lg:pt-1">
               <a
                 href="https://github.com/agp745"
                 target="_blank"
                 className="transition hover:scale-110"
               >
-                <GitHubLogoIcon width={20} height={20} />
+                <DynamicLogo
+                  mobileLogo={<GitHubLogoIcon width={35} height={35} />}
+                  logo={<GitHubLogoIcon width={20} height={20} />}
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/alejandro-perez-dev745/"
                 target="_blank"
                 className="text-neutral-200 transition hover:scale-110"
               >
-                <LinkedInLogoIcon width={20} height={20} />
+                <DynamicLogo
+                  mobileLogo={<LinkedInLogoIcon width={35} height={35} />}
+                  logo={<LinkedInLogoIcon width={20} height={20} />}
+                />
               </a>
               <Link href="/SoftwareResume.pdf" target="_blank" className="">
-                <FileTextIcon width={20} height={20} />
+                <DynamicLogo
+                  mobileLogo={<FileTextIcon width={35} height={35} />}
+                  logo={<FileTextIcon width={20} height={20} />}
+                />
               </Link>
             </div>
 
             <DesktopHeaders className="hidden lg:flex lg:flex-col lg:gap-2 lg:overflow-x-hidden lg:pt-20" />
           </header>
 
-          <SpaceTop size={10} />
+          <SpaceTop size={6} />
 
           <Main className="overflow-x-hidden overflow-y-scroll px-2 sm:px-10 md:px-12 lg:w-fit">
             <Section id="about" className="pb-12 font-normal lg:max-w-xl">
