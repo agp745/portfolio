@@ -15,13 +15,6 @@ interface ProjectCardProps {
   className?: string;
 }
 
-const resizerImageURL = "";
-const appTrackerImageURL = "";
-const ezgoImageURL = "/projects/ezgo.png";
-const pubcrawlImageURL = "/projects/pubcrawl.png";
-const projectiedImageURL = "/projects/projectied.png";
-const mglImageURL = "/projects/mgl.png";
-
 export function ProjectCard({
   title,
   description,
@@ -37,8 +30,8 @@ export function ProjectCard({
         "group flex rounded-md border-black bg-cover bg-no-repeat shadow-inner md:max-w-xl",
         className,
         {
-          "bg-black":
-            title === "Application Tracker" || title === "resizer-cli",
+          "bg-black": title === "Application Tracker",
+          "bg-url[url(/projects/resizer-cli.png)]": title === "resizer-cli",
           "bg-[url(/projects/ezgo.png)]": title === "EzGo",
           "bg-[url(/projects/pubcrawl.png)]": title === "Pub Crawl",
           "bg-[url(/projects/projectied.png)]": title === "Projectied",
@@ -46,7 +39,7 @@ export function ProjectCard({
         },
       )}
     >
-      <div className="rounded-md bg-black/50 p-4 backdrop-blur-sm transition duration-100 ease-in lg:bg-black/100 lg:hover:bg-black/50">
+      <div className="rounded-md bg-black/50 p-4 backdrop-blur-sm transition duration-200 ease-in lg:bg-black/100 lg:hover:bg-black/50">
         <div className="flex flex-col lg:gap-3">
           <div className="flex items-center gap-1">
             <h3 className="font-medium text-white transition duration-100 ease-in group-hover:text-sky-400">
