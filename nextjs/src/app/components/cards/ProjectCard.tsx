@@ -30,8 +30,9 @@ export function ProjectCard({
         "group flex rounded-md border-black bg-cover bg-no-repeat shadow-inner md:max-w-xl",
         className,
         {
-          "bg-black": title === "Application Tracker",
-          "bg-url[url(/projects/resizer-cli.png)]": title === "resizer-cli",
+          "bg-blue-800/20 bg-[url(/projects/resizer-cli.png)] bg-contain bg-right":
+            title === "resizer-cli",
+          "bg-blue-800/30": title === "Application Tracker",
           "bg-[url(/projects/ezgo.png)]": title === "EzGo",
           "bg-[url(/projects/pubcrawl.png)]": title === "Pub Crawl",
           "bg-[url(/projects/projectied.png)]": title === "Projectied",
