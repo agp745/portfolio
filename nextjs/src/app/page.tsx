@@ -24,7 +24,7 @@ export default function Home() {
             <h1 className="text-6xl">Alejandro Perez</h1>
             <p className="pt-1 text-lg">Software Developer</p>
 
-            <div className="flex gap-2 pt-2 lg:pt-1">
+            <div className="flex gap-2 pt-3 lg:pt-1">
               <a
                 href="https://github.com/agp745"
                 target="_blank"
@@ -56,11 +56,11 @@ export default function Home() {
             <DesktopHeaders className="hidden lg:flex lg:flex-col lg:gap-2 lg:overflow-x-hidden lg:pt-20" />
           </header>
 
-          <SpaceTop size={6} />
+          {/* <SpaceTop size={6} /> */}
 
           <Main className="overflow-x-hidden overflow-y-scroll px-2 sm:px-10 md:px-12 lg:w-fit">
             <Section id="about" className="pb-12 font-normal lg:max-w-xl">
-              <SpaceTop size={3} />
+              {/* <SpaceTop size={3} /> */}
               <MobileHeader>about</MobileHeader>
               <SpaceTop size={7} />
               <div className="flex flex-col gap-2 text-sm text-neutral-300 sm:text-base">
