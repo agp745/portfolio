@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useScrollPosition } from "../Main";
+import { useScrollPosition } from "../hooks/useScrollPosition";
 import { cn } from "@/utils/cn";
 
 export function MobileHeader({ children }: { children: React.ReactNode }) {
   const headerRef = useRef<HTMLHeadingElement | null>(null);
-  const scrollPosition = useScrollPosition();
+  const { scrollPosition } = useScrollPosition();
 
   const [isSticky, setIsSticky] = useState(false);
   const [initialOffset, setInitialOffset] = useState<number | undefined>(

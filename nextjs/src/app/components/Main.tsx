@@ -1,31 +1,17 @@
 "use client";
 
-import {
-  ReactNode,
-  useState,
-  useRef,
-  createContext,
-  useContext,
-  MutableRefObject,
-} from "react";
+import { useRef } from "react";
+
+import { useScrollPosition } from "./hooks/useScrollPosition";
 
 interface MainSectionProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className: string;
 }
 
-export const ScrollPositionContext = createContext<number | undefined>(
-  undefined,
-);
-
-export function useScrollPosition() {
-  return useContext(ScrollPositionContext);
-}
-
 export function Main({ children, className }: MainSectionProps) {
-  const [scrollPosition, setScrollPosition] = useState<number | undefined>(
-    undefined,
-  );
+  const { setScrollPosition } = useScrollPosition();
+
   const mainRef = useRef<HTMLElement | null>(null);
 
   const handleScroll = () => {
@@ -35,10 +21,8 @@ export function Main({ children, className }: MainSectionProps) {
   };
 
   return (
-    <ScrollPositionContext.Provider value={scrollPosition}>
-      <section ref={mainRef} onScroll={handleScroll} className={className}>
-        {children}
-      </section>
-    </ScrollPositionContext.Provider>
+    <section ref={mainRef} onScroll={handleScroll} className={className}>
+      {children}
+    </section>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { useScrollPosition } from "./Main";
+import { useScrollPosition } from "./hooks/useScrollPosition";
 import { useSectionContext } from "./hooks/useSection";
 import { useScrollContext } from "./hooks/useScroll";
 
@@ -16,7 +16,7 @@ type SectionStates = "about" | "experience" | "projects";
 export function Section({ children, id, className }: SectionProps) {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollPosition = useScrollPosition();
+  const { scrollPosition } = useScrollPosition();
   const { setCurrentSection } = useSectionContext();
   const { section } = useScrollContext();
 
