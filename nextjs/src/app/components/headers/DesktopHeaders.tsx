@@ -1,21 +1,30 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useSectionContext } from "../hooks/useSection"
-import { SpaceTop } from "../Space"
-import { cn } from "@/utils/cn"
-import { DotFilledIcon } from "@radix-ui/react-icons"
+import { useSectionContext } from "../hooks/useSection";
+import { useScrollContext } from "../hooks/useScroll";
+import { SpaceTop } from "../Space";
+import { cn } from "@/utils/cn";
+import { DotFilledIcon } from "@radix-ui/react-icons";
 
 interface DesktopHeadersProps {
-  className: string
+  className: string;
 }
 
 export function DesktopHeaders({ className }: DesktopHeadersProps) {
-  const { currentSection } = useSectionContext()
+  const { currentSection } = useSectionContext();
+
+  const { setSection } = useScrollContext();
+
+  const handleClick = (sectionID: "about" | "experience" | "projects") => {
+    setSection(sectionID);
+  };
 
   return (
     <div className={cn("tracking-wider text-lg", className)}>
-      <Link href='/' className='flex items-center w-fit transition'>
+      <button
+        onClick={() => handleClick("about")}
+        className="flex items-center w-fit transition"
+      >
         <DotFilledIcon
           className={cn("transition", {
             block: currentSection === "about",
@@ -31,8 +40,11 @@ export function DesktopHeaders({ className }: DesktopHeadersProps) {
         >
           about
         </div>
-      </Link>
-      <Link href='/' className='flex items-center w-fit transition'>
+      </button>
+      <button
+        onClick={() => handleClick("experience")}
+        className="flex items-center w-fit transition"
+      >
         <DotFilledIcon
           className={cn("hidden transition", {
             "block opacity-0": currentSection === "experience",
@@ -45,8 +57,11 @@ export function DesktopHeaders({ className }: DesktopHeadersProps) {
         >
           experience
         </div>
-      </Link>
-      <Link href='/' className='flex items-center w-fit transition'>
+      </button>
+      <button
+        onClick={() => handleClick("projects")}
+        className="flex items-center w-fit transition"
+      >
         <DotFilledIcon
           className={cn("hidden transition", {
             "block opacity-0": currentSection === "projects",
@@ -59,12 +74,12 @@ export function DesktopHeaders({ className }: DesktopHeadersProps) {
         >
           projects
         </div>
-      </Link>
+      </button>
 
       <SpaceTop size={10} />
-      <Link href='/SoftwareResume.pdf' target='_blank' className='w-fit'>
+      <a href="/SoftwareResume.pdf" target="_blank" className="w-fit">
         resume
-      </Link>
+      </a>
     </div>
-  )
+  );
 }

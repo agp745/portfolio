@@ -1,6 +1,13 @@
 "use client";
 
-import { ReactNode, useState, useRef, createContext, useContext } from "react";
+import {
+  ReactNode,
+  useState,
+  useRef,
+  createContext,
+  useContext,
+  MutableRefObject,
+} from "react";
 
 interface MainSectionProps {
   children: ReactNode;

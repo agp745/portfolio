@@ -1,11 +1,9 @@
 "use client";
 
-//top - 50.75
-
-import { useRef, useState, useEffect, MutableRefObject } from "react";
+import { useRef, useEffect } from "react";
 import { useScrollPosition } from "./Main";
 import { useSectionContext } from "./hooks/useSection";
-import { useIsVisible } from "./hooks/useIsVisible";
+import { useScrollContext } from "./hooks/useScroll";
 
 interface SectionProps {
   children: React.ReactNode;
@@ -20,6 +18,17 @@ export function Section({ children, id, className }: SectionProps) {
 
   const scrollPosition = useScrollPosition();
   const { setCurrentSection } = useSectionContext();
+  const { section } = useScrollContext();
+
+  useEffect(() => {
+    if (sectionRef.current) {
+      if (sectionRef.current.id === section) {
+        sectionRef.current.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [section]);
 
   useEffect(() => {
     if (sectionRef.current) {
