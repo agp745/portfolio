@@ -36,7 +36,7 @@ export default function Home() {
                 />
               </a>
               <a
-                href="https://www.linkedin.com/in/alejandro-perez-dev745/"
+                href="https://www.linkedin.com/in/agp745/"
                 target="_blank"
                 className="text-neutral-200 transition hover:scale-110"
               >
