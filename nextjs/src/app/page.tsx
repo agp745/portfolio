@@ -108,7 +108,7 @@ export default function Home() {
                   company="MM General Contracting"
                   dates={{
                     from: "June 2023",
-                    to: "Present",
+                    to: "November 2023",
                   }}
                   description="Independently spearheaded the creation of MM General Contracting's website, architecting a dynamic online presence from inception using modern technologies. Engineered a command-line interface (CLI) tool resulting in a substantial reduction in image sizes. This enhancement translated to notable improvements in website load times and image optimization, ultimately enhancing the overall user experience."
                   technologies={[
@@ -126,6 +126,12 @@ export default function Home() {
               <MobileHeader>projects</MobileHeader>
               <div className="flex flex-col gap-4 md:items-center lg:items-end ">
                 <SpaceTop size={3} />
+                <ProjectCard
+                  title="Go Load Balancer"
+                  description="Efficient and performant load balancer built in Go. Elevate your system's scalability and stability with this streamlined, powerful solution."
+                  technologies={["Go"]}
+                  link="https://github.com/agp745/CodingChallenges/tree/main/loadBalancer"
+                />
                 <ProjectCard
                   title="resizer-cli"
                   description="A command-line interface (CLI) tool that utilizes FFMPEG to resize all images in a specified folder."

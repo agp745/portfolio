@@ -3,6 +3,7 @@ import { cn } from "@/utils/cn";
 
 interface ProjectCardProps {
   title:
+    | "Go Load Balancer"
     | "resizer-cli"
     | "Application Tracker"
     | "EzGo"
